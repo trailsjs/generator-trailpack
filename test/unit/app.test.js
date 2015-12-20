@@ -3,7 +3,7 @@ import os from 'os';
 import { assert, test } from 'yeoman-generator';
 
 describe('trailpack:app', () => {
-  describe('Should create trailpack from trailpack/archtype', () => {
+  describe('Should create trailpack from trailpack/archetype', () => {
     before(done => {
       test
         .run(path.join(__dirname, '../../src/app'))
