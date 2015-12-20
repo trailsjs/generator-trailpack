@@ -2,25 +2,25 @@ import path from 'path';
 import os from 'os';
 import { assert, test } from 'yeoman-generator';
 
-describe('trailpack:model', () => {
-  describe('Should properly generate model interface', () => {
+describe('trailpack:controller', () => {
+  describe('Should properly generate controller interface', () => {
     before(done => {
       test
-        .run(path.join(__dirname, '../../src/model'))
+        .run(path.join(__dirname, '../../src/controller'))
         .withArguments(['test'])
         .on('end', done)
     });
 
-    it('Should properly create model files', () => {
+    it('Should properly create controller files', () => {
       assert.file([
-        'api/models/Test.js'
+        'api/controllers/TestController.js'
       ]);
 
     });
 
     it('Should properly create test files', () => {
       assert.file([
-        'test/unit/models/Test.test.js'
+        'test/integration/controllers/TestController.test.js'
       ]);
 
     });
