@@ -4,7 +4,6 @@ import { assert, test } from 'yeoman-generator';
 
 describe('trailpack', () => {
   describe('Should create from trailpack/archtype', () => {
-    /*
     before(done => {
 
       test
@@ -24,6 +23,5 @@ describe('trailpack', () => {
         'README.md'
       ]);
     });
-    */
   });
 });

@@ -21,7 +21,6 @@ describe('trailpack:model', () => {
       assert.fileContent('api/models/Test.js', /beforeUpdate:/);
     });
 
-    /*
     it('Should properly create test files', () => {
       assert.file([
         'test/unit/controllers/TestController.test.js',
@@ -30,6 +29,6 @@ describe('trailpack:model', () => {
 
       assert.fileContent('test/unit/controllers/TestController.test.js', /import Controller from '\.\.\/\.\.\/\.\.\/api\/controllers\/TestController'/);
       assert.fileContent('test/unit/models/Test.test.js', /import Model from '\.\.\/\.\.\/\.\.\/api\/models\/Test'/);
-    });*/
+    });
   });
 });
