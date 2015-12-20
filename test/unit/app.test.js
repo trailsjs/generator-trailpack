@@ -7,6 +7,7 @@ describe('trailpack:app', () => {
     before(done => {
       test
         .run(path.join(__dirname, '../../src/app'))
+        .withPrompts({ license: 'MIT' }) // Mock the prompt answers
         .on('end', done)
     });
 
