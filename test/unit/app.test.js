@@ -4,22 +4,13 @@ import { assert, test } from 'yeoman-generator';
 
 describe('trailpack', () => {
   describe('Should create from trailpack/archtype', () => {
+    /*
     before(done => {
-      /*test
-        .run(path.join(__dirname, '../../src/app'))
-        .withGenerators([
-          [test.createDummyGenerator(), 'trailpack:controller'],
-          [test.createDummyGenerator(), 'trailpack:model'],
-          [test.createDummyGenerator(), 'trailpack:policy'],
-          [test.createDummyGenerator(), 'trailpack:service']
-        ])
-        .on('end', done);*/
+
       test
-        .run(path.join(__dirname, '../../generators/app'))
+        .run(path.join(__dirname, '../../src/app'))
         .withArguments(['test'])
-        .withOptions({
-          'licence': 'MIT'
-        })
+
         .on('end', done)
     });
 
@@ -33,5 +24,6 @@ describe('trailpack', () => {
         'README.md'
       ]);
     });
+    */
   });
 });

@@ -1,22 +1,16 @@
-sudo: false
 language: node_js
-cache:
-  directories:
-    - node_modules
+node_js:
+- '4'
+- stable
+
 notifications:
   email: false
-node_js:
-  - '4'
-  - 'stable'
+  webhooks:
+    urls:
+    - https://webhooks.gitter.im/e/54f8a1e753f859f5ca1a
+    on_start: never
+    on_failure: change
 
-before_script:
-  - npm prune
-  - 'curl -Lo travis_after_all.py https://git.io/vLSON'
-after_success:
-  - python travis_after_all.py
-  - export $(cat .to_export_back)
-  - npm run coveralls
-  - npm run semantic-release
 deploy:
   provider: npm
   email: hello@trailsjs.io
@@ -26,12 +20,3 @@ deploy:
     tags: true
     repo: jaumard/generator-trailpack
     node: 'stable'
-branches:
-  except:
-    - "/^v\\d+\\.\\d+\\.\\d+$/"
-webhooks:
-    urls:
-    - https://webhooks.gitter.im/e/54f8a1e753f859f5ca1a
-    on_start: never
-    on_failure: change
-

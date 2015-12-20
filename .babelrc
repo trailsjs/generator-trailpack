@@ -1,6 +1,11 @@
 {
-  "stage": 0,
+  "presets": ["es2015", "stage-0"],
+  "plugins": ["add-module-exports"],
   "ignore": [
-
+    "app/templates",
+    "model/templates",
+    "controller/templates",
+    "policy/templates",
+    "service/templates"
   ]
 }
