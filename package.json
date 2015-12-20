@@ -1,0 +1,58 @@
+{
+  "name": "generator-trailpack",
+  "version": "0.0.0",
+  "description": "Trailpack Yeoman Generator for Trails",
+  "main": "generators/app/index.js",
+  "scripts": {
+    "clean": "rm -rf ./generators",
+    "compile": "npm run clean && cp -r src/ generators/ && babel src --out-dir generators",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "dev": "npm run clean && cp -r src/ generators/ && babel src --watch --out-dir generators",
+    "prepublish": "npm run compile",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "test": "babel-node node_modules/.bin/isparta cover _mocha"
+  },
+  "keywords": [
+    "yeoman-generator",
+    "trails",
+    "trailsjs",
+    "trailpack",
+    "generator-trailpack",
+    "boilerplate",
+    "scaffolder",
+    "scaffold",
+    "yeoman",
+    "generator"
+  ],
+  "dependencies": {
+    "chalk": "1.1.1",
+    "falafel": "^1.2.0",
+    "generator-node": "trailsjs/generator-node",
+    "mkdirp": "^0.5.1",
+    "print-message": "1.4.0",
+    "trails": "latest",
+    "trailpack": "latest",
+    "update-notifier": "0.5.0",
+    "yeoman-generator": "0.21.1",
+    "yosay": "1.1.0"
+  },
+  "devDependencies": {
+    "babel": "5.8.34",
+    "chai": "3.4.1",
+    "coveralls": "2.11.4",
+    "cz-conventional-changelog": "1.1.4",
+    "isparta": "4.0.0",
+    "mocha": "2.3.4",
+    "semantic-release": "4.3.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trails/generator-trailpack.git"
+  },
+  "author": "Aumard Jimmy <jimmy.aumard@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/trails/generator-trailpack/issues"
+  },
+  "homepage": "https://github.com/trails/generator-trailpack#readme"
+}

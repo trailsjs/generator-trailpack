@@ -1,0 +1,3 @@
+./test/unit/app.test.js
+--reporter nyan
+--recursive
