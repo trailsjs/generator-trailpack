@@ -7,7 +7,11 @@ describe('trailpack:app', () => {
     before(done => {
       test
         .run(path.join(__dirname, '../../src/app'))
-        .withPrompts({ license: 'MIT' })
+        .withPrompts({ license: 'MIT' }) // Mock the prompt answers
+        .withOptions({
+          'skip-update': true,
+          'skip-install': true
+        })
         .on('end', done)
     });
 
