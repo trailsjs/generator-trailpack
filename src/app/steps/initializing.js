@@ -28,7 +28,7 @@ export default {
 
   sayHello: function () {
     this.log()
-    this.log('Get ready to blaze a new ' + chalk.green('Trails Application') + '!');
+    this.log('Get ready to blaze a new ' + chalk.green('Trailpack module') + '!');
     this.log()
   },
 
