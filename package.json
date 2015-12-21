@@ -26,10 +26,12 @@
   ],
   "dependencies": {
     "chalk": "1.1.1",
+    "detect-conflict": "^1.0.0",
     "falafel": "^1.2.0",
     "generator-node": "trailsjs/generator-node",
     "mkdirp": "^0.5.1",
     "print-message": "1.4.0",
+    "path-exists": "^2.0.0",
     "trails": "latest",
     "trailpack": "latest",
     "update-notifier": "0.5.0",
