@@ -1,5 +1,8 @@
 Generators:
 
+  Create New Api
+    yo trailpack: api <api-name>
+
   Create New Model
     yo trailpack:model <model-name>
 
