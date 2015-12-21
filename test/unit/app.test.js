@@ -7,7 +7,7 @@ describe('trailpack:app', () => {
     before(done => {
       test
         .run(path.join(__dirname, '../../src/app'))
-        .withPrompts({ authorEmail: 'hello@trailsjs.io', license: 'MIT' }) // Mock the prompt answers
+        .withPrompts({ author: 'trailsjs', authorEmail: 'hello@trailsjs.io', license: 'MIT' }) // Mock the prompt answers
         .withOptions({
           'skip-update': true,
           'skip-install': true
