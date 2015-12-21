@@ -19,7 +19,7 @@ export default {
   },
   pkg () {
     // node:app generator will merge into this
-    let trailsPackage = require(path.resolve(TRAILS_TEMPLATE, 'package.json'))
-    this.fs.writeJSON(this.destinationPath('package.json'), trailsPackage)
+    // let trailsPackage = require(path.resolve(TRAILS_TEMPLATE, 'package.json'))
+    // this.fs.writeJSON(this.destinationPath('package.json'), trailsPackage)
   }
 };
