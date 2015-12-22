@@ -1,4 +1,4 @@
-./test/unit/api.test.js
+./test/unit/**/*.test.js
 --reporter nyan
 --recursive
 --timeout 120000
