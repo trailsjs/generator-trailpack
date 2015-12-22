@@ -13,7 +13,7 @@ describe('trailpack:api', () => {
         .withArguments(['apiTest'])
         .on('end', function (err) {
           model = true;
-          if(controller == true && model == true){
+          if (controller == true && model == true) {
             done(err);
           }
         })
@@ -22,7 +22,7 @@ describe('trailpack:api', () => {
         .withArguments(['apiTest'])
         .on('end', function (err) {
           controller = true;
-          if(controller == true && model == true){
+          if (controller == true && model == true) {
             done(err);
           }
         })

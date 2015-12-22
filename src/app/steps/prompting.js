@@ -6,6 +6,4 @@
 import chalk from 'chalk';
 import questions from '../questions';
 
-export default {
-
-};
+export default {};
