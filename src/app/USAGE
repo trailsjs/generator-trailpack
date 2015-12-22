@@ -1,0 +1,16 @@
+Generators:
+
+  Create New Api
+    yo trailpack: api <api-name>
+
+  Create New Model
+    yo trailpack:model <model-name>
+
+  Create New Controller
+    yo trailpack:controller <controller-name>
+
+  Create New Policy
+    yo trailpack:policy <policy-name>
+
+  Create New Service
+    yo trailpack:service <service-name>
