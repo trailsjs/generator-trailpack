@@ -5,7 +5,7 @@
   "main": "generators/app/index.js",
   "scripts": {
     "clean": "rm -rf ./generators",
-    "compile": "npm run clean && cp -r src/ generators/ && babel src --out-dir generators",
+    "compile": "npm run clean && cp -r src/ generators/ && babel src --out-dir generators --ignore **/templates/**",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "dev": "npm run clean && cp -r src/ generators/ && babel src --watch --out-dir generators",
     "prepublish": "npm run compile",
