@@ -3,15 +3,6 @@
   "version": "0.0.0",
   "description": "Trailpack Yeoman Generator for Trails",
   "main": "generators/app/index.js",
-  "scripts": {
-    "clean": "rm -rf ./generators",
-    "compile": "npm run clean && cp -r src/ generators/ && babel src --out-dir generators --ignore **/templates/**",
-    "coveralls": "cat ./coverage/lcov.info | coveralls",
-    "dev": "npm run clean && cp -r src/ generators/ && babel src --watch --out-dir generators",
-    "prepublish": "npm run compile",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "test": "babel-node node_modules/.bin/isparta cover _mocha"
-  },
   "keywords": [
     "yeoman-generator",
     "trails",
@@ -24,6 +15,39 @@
     "yeoman",
     "generator"
   ],
+  "homepage": "https://github.com/trailsjs/generator-trailpack",
+  "bugs": {
+    "url": "https://github.com/trails/generator-trailpack/issues",
+    "email": "bugs@trailsjs.io"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Jimmy Aumard",
+    "email": "jimmy.aumard@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Jimmy Aumard",
+      "url": "https://github.com/jaumard"
+    },
+    {
+      "name": "Yann Bertrand",
+      "url": "https://github.com/YannBertrand"
+    }
+  ],
+  "scripts": {
+    "clean": "rm -rf ./generators",
+    "compile": "npm run clean && cp -r src/ generators/ && babel src --out-dir generators --ignore **/templates/**",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "dev": "npm run clean && cp -r src/ generators/ && babel src --watch --out-dir generators",
+    "prepublish": "npm run compile",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "test": "babel-node node_modules/.bin/isparta cover _mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trailsjs/generator-trailpack.git"
+  },
   "dependencies": {
     "chalk": "1.1.1",
     "detect-conflict": "^1.0.0",
@@ -54,11 +78,5 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/trails/generator-trailpack.git"
-  },
-  "author": "Aumard Jimmy <jimmy.aumard@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/trails/generator-trailpack/issues"
-  },
-  "homepage": "https://github.com/trails/generator-trailpack#readme"
+  }
 }

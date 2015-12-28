@@ -59,7 +59,7 @@ const Util = module.exports = {
   },
 
   getRequireStatement (fileName) {
-    return `exports.${fileName} = require('./${fileName}')`
+    return `exports.${fileName} = require('./${fileName}')\n`
   },
 
   getUpdatedIndexFile (fileName, fileContents) {
@@ -71,7 +71,7 @@ const Util = module.exports = {
           node.update(requireStatement)
         }
         else {
-          node.update(src + '\n' + requireStatement)
+          node.update(src + requireStatement)
         }
       }
     })
