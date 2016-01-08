@@ -7,7 +7,6 @@
     "yeoman-generator",
     "trails",
     "trailsjs",
-    "trailpack",
     "generator-trailpack",
     "boilerplate",
     "scaffolder",
@@ -46,7 +45,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/trails/generator-trailpack.git"
+    "url": "git+https://github.com/trailsjs/generator-trailpack.git"
   },
   "dependencies": {
     "chalk": "1.1.1",
