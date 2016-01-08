@@ -1,6 +1,6 @@
 {
   "name": "generator-trailpack",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Trailpack Yeoman Generator for Trails",
   "main": "generators/app/index.js",
   "keywords": [
@@ -46,7 +46,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/trailsjs/generator-trailpack.git"
+    "url": "git+https://github.com/trails/generator-trailpack.git"
   },
   "dependencies": {
     "chalk": "1.1.1",
@@ -74,9 +74,5 @@
     "isparta": "4.0.0",
     "mocha": "2.3.4",
     "semantic-release": "4.3.5"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/trails/generator-trailpack.git"
   }
 }
