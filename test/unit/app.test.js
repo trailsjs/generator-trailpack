@@ -33,8 +33,18 @@ describe('trailpack:app', () => {
     it('should set correct module name in package.json', () => {
       assert.JSONFileContent('package.json', { name: 'trailpack-test' })
     })
+    it('should set correct license in package.json', () => {
+      assert.JSONFileContent('package.json', { license: 'MIT' })
+    })
     it('should set correct class name in index.js', () => {
       assert.fileContent('index.js', /class TestTrailpack extends Trailpack/)
     })
+    it('should set correct title in README', () => {
+      assert.fileContent('README.md', /^# trailpack-test/)
+    })
+    it('should set correct require in README "configure" section', () => {
+      assert.fileContent('README.md', "require('trailpack-test')")
+    })
   });
 });
+

@@ -29,4 +29,13 @@ export default {
 
     this.fs.write(this.destinationPath('index.js'), classUpdated)
   },
+  readme () {
+    const nodeAnswers = this.options.subgenerators.node
+
+    this.fs.copyTpl(path.resolve(TRAILS_TEMPLATE, 'README.md'), this.destinationPath('README.md'), {
+      name: nodeAnswers.name,
+      description: nodeAnswers.description,
+      githubAccount: nodeAnswers.githubAccount
+    })
+  }
 };

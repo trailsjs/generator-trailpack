@@ -99,7 +99,7 @@ const Util = module.exports = {
    * @param name of the form trailpack-something
    */
   getTrailpackClassName (name) {
-    const [ str, tpClassName  ] = /trailpack-(\w+)$/.exec(name)
+    const [ str, tpPrefix, tpClassName  ] = /(trailpack-)?(\w+)$/.exec(name || '')
 
     return `${Util.capitalizeFirstLetter(tpClassName)}Trailpack`
   }
