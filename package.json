@@ -53,6 +53,7 @@
     "detect-conflict": "^1.0.0",
     "falafel": "^1.2.0",
     "generator-node": "trailsjs/generator-node",
+    "lodash": "^4.0.0",
     "mkdirp": "^0.5.1",
     "path-exists": "^2.0.0",
     "print-message": "1.4.0",

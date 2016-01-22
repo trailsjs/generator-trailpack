@@ -1,5 +1,4 @@
 import path from 'path';
-import os from 'os';
 import { assert, test } from 'yeoman-generator';
 
 describe('trailpack:app', () => {
@@ -7,7 +6,12 @@ describe('trailpack:app', () => {
     before(done => {
       test
         .run(path.join(__dirname, '../../src/app'))
-        .withPrompts({authorName: 'trailsjs', authorEmail: 'hello@trailsjs.io', license: 'MIT'}) // Mock the prompt answers
+        .withPrompts({
+          name: 'trailpack-test',
+          authorName: 'trailsjs',
+          authorEmail: 'hello@trailsjs.io',
+          license: 'MIT'
+        })
         .withOptions({
           'skip-update': true,
           'skip-install': true
@@ -25,5 +29,12 @@ describe('trailpack:app', () => {
         'README.md'
       ]);
     });
+
+    it('should set correct module name in package.json', () => {
+      assert.JSONFileContent('package.json', { name: 'trailpack-test' })
+    })
+    it('should set correct class name in index.js', () => {
+      assert.fileContent('index.js', /class TestTrailpack extends Trailpack/)
+    })
   });
 });

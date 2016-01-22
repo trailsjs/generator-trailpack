@@ -9,7 +9,7 @@ const Util = module.exports = {
   /**
    * Monkey-patch to support index.js file updating without confirmation
    */
-    patchConflicter () {
+  patchConflicter () {
     Conflicter.prototype.collision = function (file, cb) {
       var rfilepath = path.relative(process.cwd(), file.path);
       if (!pathExists.sync(file.path)) {
@@ -77,5 +77,30 @@ const Util = module.exports = {
     })
 
     return newFileContents.toString()
+  },
+
+  getUpdatedTrailpackClass (fileContents, name) {
+    let newFileContents = falafel(fileContents, { ecmaVersion: 6 }, node => {
+      if (node.type == 'Identifier' && node.parent.type == 'ClassExpression' &&
+          node.parent.superClass.name == 'Trailpack' &&
+          node.name == 'Archetype') {
+        node.update(Util.getTrailpackClassName(name))
+      }
+    })
+
+    return newFileContents.toString()
+  },
+
+  capitalizeFirstLetter (word) {
+    return word.charAt(0).toUpperCase() + word.slice(1)
+  },
+
+  /**
+   * @param name of the form trailpack-something
+   */
+  getTrailpackClassName (name) {
+    const [ str, tpClassName  ] = /trailpack-(\w+)$/.exec(name)
+
+    return `${Util.capitalizeFirstLetter(tpClassName)}Trailpack`
   }
 }
