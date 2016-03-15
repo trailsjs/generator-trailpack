@@ -9,11 +9,10 @@ const path = require('path')
 const TRAILS_TEMPLATE = path.dirname(require.resolve('trailpack/archetype'))
 
 export default {
-  genericApi () {
+  files () {
     this.fs.copy(path.resolve(TRAILS_TEMPLATE, 'api', '**'), this.destinationPath('api'))
-  },
-  config () {
     this.fs.copy(path.resolve(TRAILS_TEMPLATE, 'config', '**'), this.destinationPath('config'))
+    this.fs.copy(path.resolve(TRAILS_TEMPLATE, 'test', '**'), this.destinationPath('test'))
   },
   pkg () {
     // node:app generator will merge into this
