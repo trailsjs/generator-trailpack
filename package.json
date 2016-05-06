@@ -52,7 +52,7 @@
     "chalk": "1.1.1",
     "detect-conflict": "^1.0.0",
     "falafel": "^1.2.0",
-    "generator-node": "trailsjs/generator-node",
+    "@trails/generator-node": "^1.10",
     "lodash": "^4.0.0",
     "mkdirp": "^0.5.1",
     "path-exists": "^2.0.0",
