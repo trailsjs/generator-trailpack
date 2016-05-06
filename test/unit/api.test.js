@@ -9,7 +9,7 @@ describe('trailpack:api', () => {
       var controller = false;
       var model = false;
       test
-        .run(path.join(__dirname, '../../src/model'))
+        .run(path.join(__dirname, '..', '..', 'src', 'model'))
         .withArguments(['apiTest'])
         .on('end', function (err) {
           model = true;
@@ -18,7 +18,7 @@ describe('trailpack:api', () => {
           }
         })
       test
-        .run(path.join(__dirname, '../../src/controller'))
+        .run(path.join(__dirname, '..', '..', 'src', 'controller'))
         .withArguments(['apiTest'])
         .on('end', function (err) {
           controller = true;

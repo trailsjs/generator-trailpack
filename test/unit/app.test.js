@@ -5,7 +5,7 @@ describe('trailpack:app', () => {
   describe('Should create trailpack from trailpack/archetype', () => {
     before(done => {
       test
-        .run(path.join(__dirname, '../../src/app'))
+        .run(path.join(__dirname, '..', '..', 'src', 'app'))
         .withPrompts({
           name: 'trailpack-test',
           authorName: 'trailsjs',

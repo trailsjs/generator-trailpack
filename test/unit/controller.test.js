@@ -6,7 +6,7 @@ describe('trailpack:controller', () => {
   describe('Should properly generate controller interface', () => {
     before(done => {
       test
-        .run(path.join(__dirname, '../../src/controller'))
+        .run(path.join(__dirname, '..', '..', 'src', 'controller'))
         .withArguments(['test'])
         .on('end', done)
     });

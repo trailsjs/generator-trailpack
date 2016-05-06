@@ -6,7 +6,7 @@ describe('trailpack:policy', () => {
   describe('Should properly generate policy interface', () => {
     before(done => {
       test
-        .run(path.join(__dirname, '../../src/policy'))
+        .run(path.join(__dirname, '..', '..', 'src', 'policy'))
         .withArguments(['test'])
         .on('end', done)
     });

@@ -6,7 +6,7 @@ describe('trailpack:service', () => {
   describe('Should properly generate service interface', () => {
     before(done => {
       test
-        .run(path.join(__dirname, '../../src/service'))
+        .run(path.join(__dirname, '..', '..', 'src', 'service'))
         .withArguments(['test'])
         .on('end', done)
     });
