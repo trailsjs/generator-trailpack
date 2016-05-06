@@ -1,6 +1,6 @@
 {
   "name": "generator-trailpack",
-  "version": "1.0.0-beta-1",
+  "version": "1.0.0-beta-2",
   "description": "Trailpack Yeoman Generator for Trails",
   "main": "generators/app/index.js",
   "keywords": [
