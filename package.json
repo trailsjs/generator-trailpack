@@ -49,19 +49,20 @@
     "url": "git+https://github.com/trailsjs/generator-trailpack.git"
   },
   "dependencies": {
+    "@trails/generator-node": "^1.11",
     "chalk": "1.1.1",
     "detect-conflict": "^1.0.0",
     "falafel": "^1.2.0",
-    "@trails/generator-node": "^1.10",
     "lodash": "^4.0.0",
     "mkdirp": "^0.5.1",
     "path-exists": "^2.0.0",
     "print-message": "1.4.0",
-    "trailpack": "latest",
-    "trails": "latest",
+    "trailpack": "^1.0.0",
+    "trails": "^1.0.0",
     "update-notifier": "0.5.0",
     "yeoman-environment": "^1.4.0",
     "yeoman-generator": "0.21.1",
+    "yeoman-test": "^1.4.0",
     "yosay": "1.1.0"
   },
   "devDependencies": {

@@ -1,11 +1,11 @@
 import path from 'path';
-import { assert, test } from 'yeoman-generator';
+import { assert } from 'yeoman-generator';
+import test from 'yeoman-test';
 
 describe('trailpack:app', () => {
   describe('Should create trailpack from trailpack/archetype', () => {
-    before(done => {
-      test
-        .run(path.join(__dirname, '..', '..', 'src', 'app'))
+    before(() => {
+      return test.run(path.join(__dirname, '..', '..', 'generators', 'app'))
         .withPrompts({
           name: 'trailpack-test',
           authorName: 'trailsjs',
@@ -16,7 +16,7 @@ describe('trailpack:app', () => {
           'skip-update': true,
           'skip-install': true
         })
-        .on('end', done)
+        .toPromise()
     });
 
     it('Should properly create root files', () => {
