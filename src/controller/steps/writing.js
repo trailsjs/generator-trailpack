@@ -19,7 +19,7 @@ export default function () {
   let fileName = `${name}Controller`
   let indexPath = this.destinationPath(DESTINATION_INDEX)
 
-  this.template(SOURCE_CONTROLLER, DESTINATION_CONTROLLER(name), {name});
+  this.template(SOURCE_CONTROLLER, DESTINATION_CONTROLLER(name), {name, fileName, answers: this.answers});
   this.template(SOURCE_CONTROLLER_TEST, DESTINATION_CONTROLLER_TEST(name), {name});
 
   if (!this.fs.exists(this.destinationPath(DESTINATION_INDEX))) {
