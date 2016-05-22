@@ -1,6 +1,6 @@
-import path from 'path';
-import { assert } from 'yeoman-generator';
-import test from 'yeoman-test';
+import path from 'path'
+import assert from 'yeoman-assert'
+import test from 'yeoman-test'
 
 describe('trailpack:app', () => {
   describe('Should create trailpack from trailpack/archetype', () => {
