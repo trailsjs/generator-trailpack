@@ -1,6 +1,6 @@
-import path from 'path';
-import os from 'os';
-import { assert, test } from 'yeoman-generator';
+import path from 'path'
+import assert from 'yeoman-assert'
+import test from 'yeoman-test'
 
 describe('trailpack:controller', () => {
   describe('Should properly generate controller interface', () => {
