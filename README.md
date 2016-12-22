@@ -58,6 +58,6 @@ information on how our projects are organized and how to get started.
 [codeclimate-image]: https://img.shields.io/codeclimate/github/trailsjs/generator-trailpack.svg?style=flat-square
 [codeclimate-url]: https://codeclimate.com/github/trailsjs/generator-trailpack
 [gitter-image]: http://img.shields.io/badge/+%20GITTER-JOIN%20CHAT%20%E2%86%92-1DCE73.svg?style=flat-square
-[gitter-url]: https://gitter.im/trailsjs/generator-trailpack
+[gitter-url]: https://gitter.im/trailsjs/trails
 [twitter-image]: https://img.shields.io/twitter/follow/trailsjs.svg?style=social
 [twitter-url]: https://twitter.com/trailsjs
